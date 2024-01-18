@@ -7,3 +7,13 @@ Darba mērķis: Ar Python palīdzību izveidot kriptovalūtas maku, kas var izve
 Lietošana: Pēc programmas palaišanas jāuzraksta pilns interesējošās kriptovalūtas nosaukums (piemēram: “Bitcoin”), pēc kura jāievada jums piederošās kriptovalūtas summa (piemēram: “2”). Programma izveido atskaiti atsevišķa pdf faila, kurā tiek attēlota Jūsu aktīvu vērtība uz šo brīdi, kā arī peļņa/zaudējumi par 1 mēnesi, 3 mēnešiem, 6 mēnešiem un 1 gadu. Pēc nepieciešamības šīm pdf failam var dot citu nosaukumu un saglabāt datorā.
 
 Piezīme - ja jūsu kriptovalūtas pilnā nosaukumā ir atstarpe, ievadot to programmā, atstarpi jāaizstāj ar simbolu “-”. Piemēram: pilnais nosaukums "Near Protocol" -> "Near-Protocol".
+
+Mūsu projektā noteiktu uzdevumu veikšanai tiek izmantotas vairākas Python bibliotēkas.
+
+Pirmā bibliotēka ir: requests. Mēs to izmantojām, lai nosūtītu HTTP pieprasījumus CoinCap API. Tas atvieglo HTTP pieprasījumu nosūtīšanu, atvieglojot mijiedarbību ar tīmekļa API.
+
+Mūsu projektā mēs izmantojam “datetime” bibliotēku, kas tiek izmantota, lai apstrādātu vēsturisko datu izguves laikspiedolus un aprēķinātu dažādus laika periodus (piemēram, 1 mēnesis, 3 mēneši utt.). Arī “timedelta” bibliotēka tiek izmantota, lai noteiktu laika intervālus vēsturisko datu izguvei, piemēram, pēdējā mēneša ilgums, pēdējie 3 mēneši utt.
+
+Un visbeidzot mēs izmantojām “fpdf” bibliotēku. Mūsu projektā tas tiek izmantots, lai izveidotu PDF atskaiti, kas satur informāciju par kriptovalūtas pašreizējo cenu un vēsturisko darbību.
+
+Lai izgūtu vēsturiskās kriptovalūtas cenas, mēs izmantojām CoinCap API. Mūsu projektam mēs esam mēģinājuši izmantot daudz dažādu API, piemēram, CoinGecko API, Mobula API un citas, taču kopumā mēs izvēlējāmies CoinCap API, jo tā ir bezmaksas un nodrošina vēsturiskas cenas. Tas apmierina projekta vajadzību pēc detalizētas informācijas par kriptovalūtas aktīviem. Turklāt CoinCap API ir lietotājam draudzīga, vienkāršojot integrācijas procesu Python skriptos.
